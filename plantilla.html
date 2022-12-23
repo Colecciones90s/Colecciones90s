@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Genius - Free Bootstrap 4 Template by Colorlib</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="css/jquery.timepicker.css">
+
+    
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+      #container {
+          width: 1000px;
+          margin: 20px auto;
+      }
+      .ck-editor__editable[role="textbox"] {
+          /* editing area */
+          min-height: 200px;
+      }
+      .ck-content .image {
+          /* block images */
+          max-width: 80%;
+          margin: 20px auto;
+      }
+  </style>
+  </head>
+  <body>
+    
+  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+    <div class="container">
+      <a class="navbar-brand" href="index.html"><i class="flaticon-university"></i>Genius <br><small>University</small></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="oi oi-menu"></span> Menu
+      </button>
+      <div class="collapse navbar-collapse" id="ftco-nav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item"><a href="index.html" class="nav-link">Inicio</a></li>
+          <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
+          <li style="display: none;" class="nav-item"><a href="colecciones.html" class="nav-link">Colecciones</a></li>
+          <li class="nav-item"><a href="faltantes.html" class="nav-link">Mis Faltantes</a></li>
+          <li class="nav-item"><a href="repetidos.html" class="nav-link">Mis Repetidos</a></li>
+          <li class="nav-item"><a href="about.html" class="nav-link">Acerca de mí</a></li>
+          <li class="nav-item cta"><a href="contacto.html" class="nav-link">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+    <!-- END nav -->
+    
+    <div class="hero-wrap hero-wrap-2" style="background-image: url('images/bg_2.jpg'); background-attachment:fixed;">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row no-gutters slider-text align-items-center justify-content-center" data-scrollax-parent="true">
+          <div class="col-md-8 ftco-animate text-center">
+            <h1 class="mb-3 bread">Contáctanos</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="ftco-section contact-section ftco-degree-bg">
+      <div class="container">
+        <div id="container">
+          <div id="editor">
+          </div>
+      </div>
+      <script src="https://cdn.ckeditor.com/ckeditor5/35.4.0/super-build/ckeditor.js"></script>
+      <script>
+          // This sample still does not showcase all CKEditor 5 features (!)
+          // Visit https://ckeditor.com/docs/ckeditor5/latest/features/index.html to browse all the features.
+          CKEDITOR.ClassicEditor.create(document.getElementById("editor"), {
+              // https://ckeditor.com/docs/ckeditor5/latest/features/toolbar/toolbar.html#extended-toolbar-configuration-format
+              toolbar: {
+                  items: [
+                      'exportPDF','exportWord', '|',
+                      'findAndReplace', 'selectAll', '|',
+                      'heading', '|',
+                      'bold', 'italic', 'strikethrough', 'underline', 'code', 'subscript', 'superscript', 'removeFormat', '|',
+                      'bulletedList', 'numberedList', 'todoList', '|',
+                      'outdent', 'indent', '|',
+                      'undo', 'redo',
+                      '-',
+                      'fontSize', 'fontFamily', 'fontColor', 'fontBackgroundColor', 'highlight', '|',
+                      'alignment', '|',
+                      'link', 'insertImage', 'blockQuote', 'insertTable', 'mediaEmbed', 'codeBlock', 'htmlEmbed', '|',
+                      'specialCharacters', 'horizontalLine', 'pageBreak', '|',
+                      'textPartLanguage', '|',
+                      'sourceEditing'
+                  ],
+                  shouldNotGroupWhenFull: true
+              },
+              // Changing the language of the interface requires loading the language file using the <script> tag.
+              // language: 'es',
+              list: {
+                  properties: {
+                      styles: true,
+                      startIndex: true,
+                      reversed: true
+                  }
+              },
+              // https://ckeditor.com/docs/ckeditor5/latest/features/headings.html#configuration
+              heading: {
+                  options: [
+                      { model: 'paragraph', title: 'Paragraph', class: 'ck-heading_paragraph' },
+                      { model: 'heading1', view: 'h1', title: 'Heading 1', class: 'ck-heading_heading1' },
+                      { model: 'heading2', view: 'h2', title: 'Heading 2', class: 'ck-heading_heading2' },
+                      { model: 'heading3', view: 'h3', title: 'Heading 3', class: 'ck-heading_heading3' },
+                      { model: 'heading4', view: 'h4', title: 'Heading 4', class: 'ck-heading_heading4' },
+                      { model: 'heading5', view: 'h5', title: 'Heading 5', class: 'ck-heading_heading5' },
+                      { model: 'heading6', view: 'h6', title: 'Heading 6', class: 'ck-heading_heading6' }
+                  ]
+              },
+              // https://ckeditor.com/docs/ckeditor5/latest/features/editor-placeholder.html#using-the-editor-configuration
+              placeholder: 'Welcome to CKEditor 5!',
+              // https://ckeditor.com/docs/ckeditor5/latest/features/font.html#configuring-the-font-family-feature
+              fontFamily: {
+                  options: [
+                      'default',
+                      'Arial, Helvetica, sans-serif',
+                      'Courier New, Courier, monospace',
+                      'Georgia, serif',
+                      'Lucida Sans Unicode, Lucida Grande, sans-serif',
+                      'Tahoma, Geneva, sans-serif',
+                      'Times New Roman, Times, serif',
+                      'Trebuchet MS, Helvetica, sans-serif',
+                      'Verdana, Geneva, sans-serif'
+                  ],
+                  supportAllValues: true
+              },
+              // https://ckeditor.com/docs/ckeditor5/latest/features/font.html#configuring-the-font-size-feature
+              fontSize: {
+                  options: [ 10, 12, 14, 'default', 18, 20, 22 ],
+                  supportAllValues: true
+              },
+              // Be careful with the setting below. It instructs CKEditor to accept ALL HTML markup.
+              // https://ckeditor.com/docs/ckeditor5/latest/features/general-html-support.html#enabling-all-html-features
+              htmlSupport: {
+                  allow: [
+                      {
+                          name: /.*/,
+                          attributes: true,
+                          classes: true,
+                          styles: true
+                      }
+                  ]
+              },
+              // Be careful with enabling previews
+              // https://ckeditor.com/docs/ckeditor5/latest/features/html-embed.html#content-previews
+              htmlEmbed: {
+                  showPreviews: true
+              },
+              // https://ckeditor.com/docs/ckeditor5/latest/features/link.html#custom-link-attributes-decorators
+              link: {
+                  decorators: {
+                      addTargetToExternalLinks: true,
+                      defaultProtocol: 'https://',
+                      toggleDownloadable: {
+                          mode: 'manual',
+                          label: 'Downloadable',
+                          attributes: {
+                              download: 'file'
+                          }
+                      }
+                  }
+              },
+              // https://ckeditor.com/docs/ckeditor5/latest/features/mentions.html#configuration
+              mention: {
+                  feeds: [
+                      {
+                          marker: '@',
+                          feed: [
+                              '@apple', '@bears', '@brownie', '@cake', '@cake', '@candy', '@canes', '@chocolate', '@cookie', '@cotton', '@cream',
+                              '@cupcake', '@danish', '@donut', '@dragée', '@fruitcake', '@gingerbread', '@gummi', '@ice', '@jelly-o',
+                              '@liquorice', '@macaroon', '@marzipan', '@oat', '@pie', '@plum', '@pudding', '@sesame', '@snaps', '@soufflé',
+                              '@sugar', '@sweet', '@topping', '@wafer'
+                          ],
+                          minimumCharacters: 1
+                      }
+                  ]
+              },
+              removePlugins: [
+                  'CKBox',
+                  'CKFinder',
+                  'EasyImage',
+                  'RealTimeCollaborativeComments',
+                  'RealTimeCollaborativeTrackChanges',
+                  'RealTimeCollaborativeRevisionHistory',
+                  'PresenceList',
+                  'Comments',
+                  'TrackChanges',
+                  'TrackChangesData',
+                  'RevisionHistory',
+                  'Pagination',
+                  'WProofreader',
+                  'MathType'
+              ]
+          });
+      </script>
+      </div>
+    </section>
+		<section class="ftco-section-parallax">
+      <div class="parallax-img d-flex align-items-center">
+        <div class="container">
+          <div class="row d-flex justify-content-center">
+            <div class="col-md-7 text-center heading-section heading-section-white ftco-animate">
+              <h2>Escríbenos</h2>
+              <p>Para cualquier consulta envienme un mensaje por este medio o cualquier red social de la descripción</p>
+              <div class="row d-flex justify-content-center mt-5">
+                <div class="col-md-8">
+                  <form action="#" class="subscribe-form">
+                    <div class="form-group d-flex">
+                      <input type="text" class="form-control" placeholder="Correo">
+                      <input type="submit" value="Suscribirse" class="submit px-3">
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="ftco-footer ftco-bg-dark ftco-section img" style="background-image: url(images/bg_2.jpg); background-attachment:fixed;">
+    	<div class="overlay"></div>
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-md-6">
+            <div class="ftco-footer-widget mb-4">
+              <h2><a class="navbar-brand" href="index.html"><i class="flaticon-university"></i> Colecciones 90s <br><small>Portal de nostalgia</small></a></h2>
+              <p>Coleccionista de promocionales de los 90s y 2000</p>
+              <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
+                <li class="ftco-animate"><a href="https://twitter.com/Colecciones90s"><span class="icon-twitter"></span></a></li>
+                <li class="ftco-animate"><a href="https://www.facebook.com/ColeccionesDragoonBallPeru/"><span class="icon-facebook"></span></a></li>
+                <li class="ftco-animate"><a href="https://www.instagram.com/ColeccionesDragonBallPeru/"><span class="icon-instagram"></span></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="ftco-footer-widget mb-4">
+            	<h2 class="ftco-heading-2">Tienes alguna duda?</h2>
+            	<div class="block-23 mb-3">
+	              <ul>
+	                <li><span class="icon icon-map-marker"></span><span class="text">Todos lados</span></li>
+	                <li><a href="#"><span class="icon icon-phone"></span><span class="text">+51 984307397</span></a></li>
+	                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">dragonballperu15@gmail.com</span></a></li>
+	              </ul>
+	            </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 text-center">
+
+          <p>
+  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a target="_blank">Rube90s</a>
+          </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/bootstrap-datepicker.js"></script>
+  <script src="js/jquery.timepicker.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+  <script src="js/google-map.js"></script>
+  <script src="js/main.js"></script>
+    
+  </body>
+</html>

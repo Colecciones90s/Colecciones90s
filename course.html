@@ -25,6 +25,22 @@
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.rawgit.com/ddenhartog/jquery-simple-pagination/master/jquery-simple-pagination-plugin.js"></script>
+    <script type="text/javascript">
+    jQuery(document).ready(function() {
+        jQuery('#paginating_div').simplePagination({
+            items_per_page: 6,
+            items_per_page_content: {
+                'Six': 6,
+                'Eleven': 11,
+                'Seventeen': 17,
+                'Thirty-three': 33,
+                'Sixty-seven': 67
+            }
+        });
+    });
+    </script>
   </head>
   <body>
     
@@ -65,7 +81,7 @@
 
     <section class="ftco-section">
     	<div class="container">
-    		<div class="row">
+    		<div class="row" id="paginating_div">
     			<div class="col-md-4 d-flex ftco-animate">
     				<div class="course align-self-stretch">
     					<a href="#" class="img" style="background-image: url(images/course-1.jpg)"></a>
@@ -125,7 +141,29 @@
     				<div class="course align-self-stretch">
     					<a href="#" class="img" style="background-image: url(images/course-6.jpg)"></a>
     					<div class="text p-4">
-    						<p class="category"><span>Business</span> <span class="price">$250</span></p>
+    						<p class="category"><span>Business</span> <span class="price">$350</span></p>
+    						<h3 class="mb-3"><a href="#">Business Studies</a></h3>
+    						<p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name</p>
+    						<p><a href="#" class="btn btn-primary">Enroll now!</a></p>
+    					</div>
+    				</div>
+    			</div>
+    			<div class="col-md-4 d-flex ftco-animate">
+    				<div class="course align-self-stretch">
+    					<a href="#" class="img" style="background-image: url(images/course-6.jpg)"></a>
+    					<div class="text p-4">
+    						<p class="category"><span>Business</span> <span class="price">$450</span></p>
+    						<h3 class="mb-3"><a href="#">Business Studies</a></h3>
+    						<p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name</p>
+    						<p><a href="#" class="btn btn-primary">Enroll now!</a></p>
+    					</div>
+    				</div>
+    			</div>
+    			<div class="col-md-4 d-flex ftco-animate">
+    				<div class="course align-self-stretch">
+    					<a href="#" class="img" style="background-image: url(images/course-6.jpg)"></a>
+    					<div class="text p-4">
+    						<p class="category"><span>Business</span> <span class="price">$550</span></p>
     						<h3 class="mb-3"><a href="#">Business Studies</a></h3>
     						<p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name</p>
     						<p><a href="#" class="btn btn-primary">Enroll now!</a></p>

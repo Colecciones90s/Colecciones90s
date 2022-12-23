@@ -1,57 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Genius - Free Bootstrap 4 Template by Colorlib</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
 
-    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
-    <link rel="stylesheet" href="css/animate.css">
-    
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/owl.theme.default.min.css">
-    <link rel="stylesheet" href="css/magnific-popup.css">
+<head>
+  <title>Genius - Free Bootstrap 4 Template by Colorlib</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link rel="stylesheet" href="css/aos.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
 
-    <link rel="stylesheet" href="css/ionicons.min.css">
+  <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+  <link rel="stylesheet" href="css/animate.css">
 
-    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
-    <link rel="stylesheet" href="css/jquery.timepicker.css">
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="css/magnific-popup.css">
 
-    
-    <link rel="stylesheet" href="css/flaticon.css">
-    <link rel="stylesheet" href="css/icomoon.css">
-    <link rel="stylesheet" href="css/style.css">
-    
-    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+  <link rel="stylesheet" href="css/aos.css">
+
+  <link rel="stylesheet" href="css/ionicons.min.css">
+
+  <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+  <link rel="stylesheet" href="css/jquery.timepicker.css">
+
+
+  <link rel="stylesheet" href="css/flaticon.css">
+  <link rel="stylesheet" href="css/icomoon.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
     integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous"> -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
 
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
-    <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
+  <script src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdn.datatables.net/buttons/2.3.2/js/dataTables.buttons.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
 
-    <script>
-      $(document).ready(function () {
-        $('#tablaLista').DataTable({
-          "language": {
-            "url": "//cdn.datatables.net/plug-ins/1.10.25/i18n/Spanish.json"
-          }
-        });
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
+  <script src="https://cdn.datatables.net/buttons/2.3.2/js/buttons.html5.min.js"></script>
+  <script src="https://cdn.datatables.net/buttons/2.3.2/js/buttons.print.min.js"></script>
+  
+  <script>
+    $(document).ready(function () {
+      // $('#tablaLista').DataTable({
+      //   "language": {
+      //     "url": "//cdn.datatables.net/plug-ins/1.10.25/i18n/Spanish.json"
+      //   }
+      // });
+      $('#tableID').DataTable({
+        dom: 'Bfrtip',
+        buttons: [
+            'copy', 'csv', 'excel', 'pdf', 'print'
+        ],
+        "ajax": 'data/Faltantes.txt',
+        "language": {
+          "url": "//cdn.datatables.net/plug-ins/1.10.25/i18n/Spanish.json"
+        }
       });
-    </script>
-  </head>
-  <body>
-    
+    });
+
+  </script>
+</head>
+
+<body>
+
   <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
     <div class="container">
-      <a class="navbar-brand" href="index.html"><i class="flaticon-university"></i>Genius <br><small>University</small></a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+      <a class="navbar-brand" href="index.html"><i class="flaticon-university"></i>Genius
+        <br><small>University</small></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
+        aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="oi oi-menu"></span> Menu
       </button>
 
@@ -68,240 +90,116 @@
       </div>
     </div>
   </nav>
-    <!-- END nav -->
-    
-    <div class="hero-wrap hero-wrap-2" style="background-image: url('images/bg_2.jpg'); background-attachment:fixed;">
-      <div class="overlay"></div>
-      <div class="container">
-        <div class="row no-gutters slider-text align-items-center justify-content-center" data-scrollax-parent="true">
-          <div class="col-md-8 ftco-animate text-center">
-            <h1 class="mb-3 bread">Mis Faltantes</h1>
-          </div>
+  <!-- END nav -->
+
+  <div class="hero-wrap hero-wrap-2" style="background-image: url('images/bg_2.jpg'); background-attachment:fixed;">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row no-gutters slider-text align-items-center justify-content-center" data-scrollax-parent="true">
+        <div class="col-md-8 ftco-animate text-center">
+          <h1 class="mb-3 bread">Mis Faltantes</h1>
         </div>
       </div>
     </div>
+  </div>
 
-    <section class="ftco-section contact-section ftco-degree-bg">
-      <div class="container">
-        <div class="row d-flex mb-5 contact-info">
-          <div class="col-md-12 mb-4">
-            <h2 class="h4">Mis Faltantes</h2>
-          </div>
-          <div class="w-100"></div>
-          <div class="col-md-12">
-            Colecciones que busco 🤓
-          </div>
+  <section class="ftco-section contact-section ftco-degree-bg">
+    <div class="container">
+      <div class="row d-flex mb-5 contact-info">
+        <div class="col-md-12 mb-4">
+          <h2 class="h4">Mis Faltantes</h2>
         </div>
-        <div>
-          <table id="tablaLista" class="table table-striped table-bordered table-sm" cellspacing="0" width="100%">
-            <thead>
-            <tr>
-              <th data-field="state" data-checkbox="true"></th>
-              <th data-sortable="true" width="20%">Colección</th>
-              <th data-sortable="true" width="40%">Faltantes</th>
-              <th data-sortable="true" width="40%">Renovar</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-              <td class="bs-checkbox "><input data-index="0" name="btSelectItem" type="checkbox"></td>
-              <td>Taps Bob Esponja Metal</td>
-              <td>32-44-45</td>
-              <td>1*-4*-6*-8*-12*-16*-19*-21*-24*-31*-35*-37*-38*-43*-50*</td>
-            </tr>
-            <tr>
-              <td class="bs-checkbox "><input data-index="1" name="btSelectItem" type="checkbox"></td>
-              <td>Hitazos CDZ</td>
-              <td>143-137-136-135-130-121-120-116-112-104-77-66-56-48-44-33-22-14-13</td>
-              <td>11-15</td>
-            </tr>
-            <tr>
-              <td class="bs-checkbox "><input data-index="2" name="btSelectItem" type="checkbox"></td>
-              <td>Chavotazos</td>
-              <td>1-2-24-33</td>
-              <td>21</td>
-            </tr>
-            <tr>
-              <td class="bs-checkbox "><input data-index="3" name="btSelectItem" type="checkbox"></td>
-              <td>Taps DBZ 1</td>
-              <td>23-24</td>
-              <td>18*-19*-21*-22*</td>
-            </tr>
-            <tr>
-              <td class="bs-checkbox "><input data-index="4" name="btSelectItem" type="checkbox"></td>
-              <td>Taps DBZ 2</td>
-              <td>1-4-15-18-20</td>
-              <td>3*-5*-10*-13*-16*</td>
-            </tr>
-            <tr>
-              <td class="bs-checkbox "><input data-index="5" name="btSelectItem" type="checkbox"></td>
-              <td>Taps GT</td>
-              <td>Ssj4 costado, dragon dorado, Dragon rojo, obb, los Juniors</td>
-              <td>Ssj4 costado, dragon dorado, Dragon rojo, obb, los Juniors</td>
-            </tr>
-            <tr>
-              <td class="bs-checkbox "><input data-index="6" name="btSelectItem" type="checkbox"></td>
-              <td>Taps Bob Esponja Metal</td>
-              <td>32-44-45</td>
-              <td>1*-4*-6*-8*-12*-16*-19*-21*-24*-31*-35*-37*-38*-43*-50*</td>
-            </tr>
-            <tr>
-              <td class="bs-checkbox "><input data-index="7" name="btSelectItem" type="checkbox"></td>
-              <td>Taps Era Hielo 3</td>
-              <td>11-51</td>
-              <td>2*-5*-8*-16*-20*-37*-40*-50*-52*-53*-54*-55*-56*-57*-58*-59*-60*</td>
-            </tr>
-            <tr>
-              <td class="bs-checkbox "><input data-index="8" name="btSelectItem" type="checkbox"></td>
-              <td>Jorobado</td>
-              <td>5-8-15-25-30-33*-35-37-43-44-45</td>
-              <td>4*-11*-27*-33*-40*</td>
-            </tr>
-            <tr>
-              <td class="bs-checkbox "><input data-index="9" name="btSelectItem" type="checkbox"></td>
-              <td>Liga de la Justicia</td>
-              <td>7-14-22-23</td>
-              <td>3*-4*-6*-9*-13*-15*-19*-20*-21*-24*</td>
-            </tr>
-            <tr>
-              <td class="bs-checkbox "><input data-index="10" name="btSelectItem" type="checkbox"></td>
-              <td>Looney Toons</td>
-              <td>5-10-30-36-45-62-65-70-91-109-110-162</td>
-              <td>8*-14*-19*-20*-24*-25*-27*-38*-44*-66*-67*-72*-93*-114*-140*-144*-147*-152*</td>
-            </tr>
-            <tr>
-              <td class="bs-checkbox "><input data-index="11" name="btSelectItem" type="checkbox"></td>
-              <td>Los 4 fantásticos</td>
-              <td>3-5-9-11-12-18-19-20-22</td>
-              <td>4*-6*-7*-15*-17*-24*</td>
-            </tr>
-            <tr>
-              <td class="bs-checkbox "><input data-index="12" name="btSelectItem" type="checkbox"></td>
-              <td>Marvel</td>
-              <td>1-11-19-22-23-24</td>
-              <td>2*-7*-9*-10*-12*-15*-17*-18*-20*-21*</td>
-            </tr>
-            <tr>
-              <td class="bs-checkbox "><input data-index="13" name="btSelectItem" type="checkbox"></td>
-              <td>Maxi Jack Looney</td>
-              <td>33-57-72</td>
-              <td>-</td>
-            </tr>
-            <tr>
-              <td class="bs-checkbox "><input data-index="14" name="btSelectItem" type="checkbox"></td>
-              <td>Maxi Jack CN</td>
-              <td>1-3-4-5-6-12-13-17-22-23-24-29-30-31-32-33-35-36-38-39-40-45-46-47-49-52-54-57-61-62-65-70-76-8</td>
-              <td>-</td>
-            </tr>
-            <tr>
-              <td class="bs-checkbox "><input data-index="15" name="btSelectItem" type="checkbox"></td>
-              <td>Power Rangers</td>
-              <td>6-9-22-32-57-62-63-64-65-66-67-68</td>
-              <td>4*-12*-19*-21*-29*-44*-47*-60*</td>
-            </tr>
-            <tr>
-              <td class="bs-checkbox "><input data-index="16" name="btSelectItem" type="checkbox"></td>
-              <td>Rugrats</td>
-              <td>34V-37N-38N-40V-41N-47N</td>
-              <td>-</td>
-            </tr>
-            <tr>
-              <td class="bs-checkbox "><input data-index="17" name="btSelectItem" type="checkbox"></td>
-              <td>X-Men Voladores</td>
-              <td>8-41-50-60-64-75-83</td>
-              <td>28*-39*-48*-58*-86*-90*-95*-99*</td>
-            </tr>
-            <tr>
-              <td class="bs-checkbox "><input data-index="18" name="btSelectItem" type="checkbox"></td>
-              <td>Yugi Brillantes</td>
-              <td>76-78</td>
-              <td>-</td>
-            </tr>
-            <tr>
-              <td class="bs-checkbox "><input data-index="19" name="btSelectItem" type="checkbox"></td>
-              <td>Hitokus</td>
-              <td>4-70</td>
-              <td>75*-83*</td>
-            </tr>
-            <tr>
-              <td class="bs-checkbox "><input data-index="20" name="btSelectItem" type="checkbox"></td>
-              <td>CubiTaps</td>
-              <td>36</td>
-              <td>20*-38*-39*</td>
-            </tr>
-            <tr>
-              <td class="bs-checkbox "><input data-index="21" name="btSelectItem" type="checkbox"></td>
-              <td>DBZ Laive</td>
-              <td>78-76-75-74-73-65-61-29</td>
-              <td>78-76-75-74-73-65-61-29</td>
-            </tr>
-            </tbody>
-          </table>
+        <div class="w-100"></div>
+        <div class="col-md-12">
+          Colecciones que busco 🤓
         </div>
       </div>
-    </section>
-		<section class="ftco-section-parallax">
-      <div class="parallax-img d-flex align-items-center">
-        <div class="container">
-          <div class="row d-flex justify-content-center">
-            <div class="col-md-7 text-center heading-section heading-section-white ftco-animate">
-              <h2>Escríbenos</h2>
-              <p>Para cualquier consulta envienme un mensaje por este medio o cualquier red social de la descripción</p>
-              <div class="row d-flex justify-content-center mt-5">
-                <div class="col-md-8">
-                  <form action="#" class="subscribe-form">
-                    <div class="form-group d-flex">
-                      <input type="text" class="form-control" placeholder="Correo">
-                      <input type="submit" value="Suscribirse" class="submit px-3">
-                    </div>
-                  </form>
-                </div>
+      <div style="overflow-x: auto;">
+        <table id="tableID" class="display" style="width: 100%;">
+          <thead>
+            <tr>
+              <th>Colección</th>
+              <th>Faltantes</th>
+              <th>Renovar</th>
+            </tr>
+          </thead>
+        </table>
+      </div>
+    </div>
+  </section>
+  <section class="ftco-section-parallax">
+    <div class="parallax-img d-flex align-items-center">
+      <div class="container">
+        <div class="row d-flex justify-content-center">
+          <div class="col-md-7 text-center heading-section heading-section-white ftco-animate">
+            <h2>Escríbenos</h2>
+            <p>Para cualquier consulta envienme un mensaje por este medio o cualquier red social de la descripción</p>
+            <div class="row d-flex justify-content-center mt-5">
+              <div class="col-md-8">
+                <a aria-label="Chat on WhatsApp"
+                  href="https://wa.me/51984307397?text=Hola%2C+quisiera+saber+más+sobre+las+colecciones">
+                  <img alt="Chatea con nosotros en WhatsApp" src="images/WhatsAppButtonGreenLarge.svg" />
+                </a>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </section>
-    <footer class="ftco-footer ftco-bg-dark ftco-section img" style="background-image: url(images/bg_2.jpg); background-attachment:fixed;">
-    	<div class="overlay"></div>
-      <div class="container">
-        <div class="row mb-5">
-          <div class="col-md-6">
-            <div class="ftco-footer-widget mb-4">
-              <h2><a class="navbar-brand" href="index.html"><i class="flaticon-university"></i> Colecciones 90s <br><small>Portal de nostalgia</small></a></h2>
-              <p>Coleccionista de promocionales de los 90s y 2000</p>
-              <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
-                <li class="ftco-animate"><a href="https://twitter.com/Colecciones90s"><span class="icon-twitter"></span></a></li>
-                <li class="ftco-animate"><a href="https://www.facebook.com/ColeccionesDragoonBallPeru/"><span class="icon-facebook"></span></a></li>
-                <li class="ftco-animate"><a href="https://www.instagram.com/ColeccionesDragonBallPeru/"><span class="icon-instagram"></span></a></li>
+    </div>
+  </section>
+  <footer class="ftco-footer ftco-bg-dark ftco-section img"
+    style="background-image: url(images/bg_2.jpg); background-attachment:fixed;">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-md-6">
+          <div class="ftco-footer-widget mb-4">
+            <h2><a class="navbar-brand" href="index.html"><i class="flaticon-university"></i> Colecciones 90s
+                <br><small>Portal de nostalgia</small></a></h2>
+            <p>Coleccionista de promocionales de los 90s y 2000</p>
+            <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
+              <li class="ftco-animate"><a href="https://twitter.com/Colecciones90s"><span
+                    class="icon-twitter"></span></a></li>
+              <li class="ftco-animate"><a href="https://www.facebook.com/ColeccionesDragoonBallPeru/"><span
+                    class="icon-facebook"></span></a></li>
+              <li class="ftco-animate"><a href="https://www.instagram.com/ColeccionesDragonBallPeru/"><span
+                    class="icon-instagram"></span></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="ftco-footer-widget mb-4">
+            <h2 class="ftco-heading-2">Tienes alguna duda?</h2>
+            <div class="block-23 mb-3">
+              <ul>
+                <li><span class="icon icon-map-marker"></span><span class="text">Todos lados</span></li>
+                <li><a href="https://wa.me/51984307397"><span class="icon icon-phone"></span><span class="text">+51
+                      984307397</span></a></li>
+                <li><a href="#"><span class="icon icon-envelope"></span><span
+                      class="text">dragonballperu15@gmail.com</span></a></li>
               </ul>
             </div>
           </div>
-          <div class="col-md-3">
-            <div class="ftco-footer-widget mb-4">
-            	<h2 class="ftco-heading-2">Tienes alguna duda?</h2>
-            	<div class="block-23 mb-3">
-	              <ul>
-	                <li><span class="icon icon-map-marker"></span><span class="text">Todos lados</span></li>
-	                <li><a href="#"><span class="icon icon-phone"></span><span class="text">+51 984307397</span></a></li>
-	                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">dragonballperu15@gmail.com</span></a></li>
-	              </ul>
-	            </div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-12 text-center">
-
-          <p>
-  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a target="_blank">Rube90s</a>
-          </p>
-          </div>
         </div>
       </div>
-    </footer>
+      <div class="row">
+        <div class="col-md-12 text-center">
+
+          <p>
+            Copyright &copy;
+            <script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with
+            <i class="icon-heart" aria-hidden="true"></i> by <a target="_blank">Rube90s</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
   <!-- loader -->
-  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
+      <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
+      <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
+        stroke="#F96D00" />
+    </svg></div>
 
 
   <script src="js/jquery-migrate-3.0.1.min.js"></script>
@@ -317,9 +215,8 @@
   <script src="js/bootstrap-datepicker.js"></script>
   <script src="js/jquery.timepicker.min.js"></script>
   <script src="js/scrollax.min.js"></script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
-  <script src="js/google-map.js"></script>
   <script src="js/main.js"></script>
-    
-  </body>
+
+</body>
+
 </html>
